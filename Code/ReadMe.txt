@@ -1,7 +1,8 @@
 PROJECT OVERVIEW  
 -----------------
 
-This repository contains the code necessary to run experiments for precipitation prediction models, as outlined in the attached Final Report.
+This repository contains the code necessary to run experiments for precipitation prediction models, as outlined in the attached Final Report. The data is too large to upload to GitHub so can be found on OneDrive at the following link: 
+
 
 REPOSITORY STRUCTURE  
 ---------------------
@@ -12,7 +13,7 @@ REPOSITORY STRUCTURE
 - environment.yml  
   Contains all libraries required to run the code.
 
-- Data/  
+- OneDrive Link: https://livewarwickac-my.sharepoint.com/:f:/g/personal/u2211284_live_warwick_ac_uk/EuN_0Z_mXx5Ah_MkJbWO7g4BPQwYGAKu4aG3ZbpE344meQ?e=SCkKxs
   Contains the hourly atmospheric and vegetation data from 2021 to 2023.
     - FINAL_CLEANED_HOURLYatmosphericdata2021to2023.json
 
@@ -128,7 +129,6 @@ conda activate [your-environment-name]
 NOTES  
 -----
 
-- The repository is available online on GitHub: 
 - Instructions for experimental setups can be found inside the corresponding notebooks.
 - To change the lookback and lookahead of the models, the making_sub_files_split_by_timestamp.py must be re-run on  FINAL_CLEANED_HOURLYatmosphericdata2021to2023.json with the lookback and lookahead variables changed. The input and output dimensions of the data should then be changed within the pipeline, along with any architectural modifications. The pipeline can then be run.
 - In all of the preprocessing functions, Surface Latent Heat Flux is divided by 10800. This is required, as outlined on the Copernicus Data Store website for the ECWMF Reanalysis dataset.
