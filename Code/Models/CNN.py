@@ -10,7 +10,7 @@ class Baseline3DCNNwithMLP(nn.Module):
         A baseline 3D CNN architecture followed by an MLP for spatiotemporal regression tasks.
 
         Parameters:
-        - input_channels: number of input feature channels (e.g. number of atmospheric variables)
+        - input_channels: number of input feature channels (number of atmospheric variables)
         - output_channels: number of channels in output (currently unused, can be used for multi-channel output)
         - time_steps: number of input time steps
         - height, width: spatial dimensions of input grid

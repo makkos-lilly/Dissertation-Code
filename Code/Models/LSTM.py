@@ -11,8 +11,8 @@ import torch.nn as nn
 
 Expected Input Shape:
     x: Tensor of shape (batch_size, sequence_length, input_size)
-       - Note: `input_size` should be the total number of variables per time step across all grid points.
-       - If you have `V` variables and `G = grid_width * grid_height` grid points, `input_size = V * G`.
+       - Note: 'input_size' should be the total number of variables per time step across all grid points.
+       - If you have `V` variables and `G = grid_width * grid_height` grid points, 'input_size = V * G'.
 
 Output Shape:
     out: Tensor of shape (batch_size, output_size * grid_width * grid_height)

@@ -10,6 +10,7 @@ Each line in the resulting json files corresponds to one variable at one timesta
 The variables that are shifted backwards, are those variables that are cumulative across the hour, 
 not instantaneous. In our case this is only total precipitation and surface latent heat flux. 
 Information on whether variables are instantaneous are not can be found on the ECWMF ERA5 Reanalysis data store.
+These variables must be changed when to add cumulative vegetation variables when processing data including vegetation variables.
 
 Data is saved in batches of 10,000 lines to prevent excessive memory usage. 
 The grib file is assumed to contain 9 variables per timestamp block.
@@ -77,7 +78,7 @@ for grb in grbs:
         'Units': units
     }
     
-    #decide where to store the variable depending on type and block position
+    #decide where to store the variable depending on type and block position. 
     if count < time_block_limit and not variable in ("Total precipitation", "Surface latent heat flux"):
         temp_list.append(grib_dataframe)
         count += 1

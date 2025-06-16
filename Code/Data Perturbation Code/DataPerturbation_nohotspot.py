@@ -242,4 +242,7 @@ def preprocess_data(data_loader, variable_names, global_stats, name, perturbatio
 
 # # Precompute perturbed data
 perturbation_type = 'accelerating' 
+
+# There are three data loaders in the main pipeline: train_loader, val_loader and test_loader. This is when validation data is used separate to the training data. 
+# For 5-fold-cross-validation, the two should be combined. Change the name of the loader in the following to preprocess all data.
 normalized_test_data = preprocess_data(test_loader, variable_names, global_stats, "test", perturbation_type)
